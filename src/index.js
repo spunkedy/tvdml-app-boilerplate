@@ -1,5 +1,5 @@
 import * as TVDML from 'tvdml';
-
+import Global from './global';
 import store from './redux/store';
 import {
   launchApp,
@@ -8,6 +8,7 @@ import {
 } from './redux/ducks/app';
 
 import RuntimeWrapper from './components/RuntimeWrapper';
+import AClient from './client';
 
 import Screen1 from './screens/Screen1';
 import Screen2 from './screens/Screen2';
@@ -58,7 +59,9 @@ TVDML
   .handleRoute('page2')
   .pipe(TVDML.render(() => (
     <RuntimeWrapper>
-      <Screen2 />
+      <AClient>
+        <Screen2 />
+      </AClient>
     </RuntimeWrapper>
   )));
 

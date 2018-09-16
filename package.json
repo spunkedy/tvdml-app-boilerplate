@@ -11,7 +11,7 @@
   "scripts": {
     "install-deps": "npx yarn@$npm_package_engines_yarn install --frozen-lockfile --check-files",
     "build": "webpack --progress",
-    "serve": "webpack-dev-server",
+    "serve": "webpack-dev-server --host 0.0.0.0",
     "dist": "NODE_ENV=production webpack --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -35,9 +35,15 @@
   },
   "homepage": "https://github.com/a-ignatov-parc/tvdml-app-boilerplate#readme",
   "dependencies": {
+    "apollo-boost": "^0.1.16",
+    "apollo-client": "^2.4.2",
+    "apollo-link": "^1.2.3",
     "file-loader": "^1.1.11",
+    "graphql": "^14.0.2",
+    "graphql-tag": "^2.9.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
+    "react-apollo": "^2.1.11",
     "react-redux": "^5.0.7",
     "redux": "^3.7.2",
     "tvdml": "^6.1.1"
